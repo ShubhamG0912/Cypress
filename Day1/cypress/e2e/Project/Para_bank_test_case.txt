@@ -1,0 +1,168 @@
+Test Planning :-
+1.Objective :- 
+    # Check If Mailing functionality to Customer care works
+    # Check If Dynamic response:- Thank you name_of_customer
+     A Customer Care Representative will be contacting you. 
+    works or not 
+    # Check Registration functionality
+    # Check If Registration functionality is giving appropriate response according to documentation
+     when the registation fails
+    # Check Login functionality
+    # Check if Login Functionality gives appropriate response as per documentation on unsuccessful login
+    # Check Logout functionality
+    
+2. Scope :-
+    # Inscope :- 
+
+3. Testing Methodology :-
+    # functional Testing 
+
+4. Approach : -
+   # Automation testing 
+   # Manual testing 
+
+5. Risks :-
+   # Inappropriate data type provided in JSON file for Automation testing
+   # Insufficiant training for Cypress
+   # Node JS modules not installed properly
+   # Server for Para bank website is down 
+   
+
+6. Mitigation plan :-
+   # Contact the Devops team to start the server immediately
+   # Ask senior testers permission to Perform manual testing instead of Automation testing
+   # immediate communication with Para bank websites IT team. 
+
+7. Schedule :-
+   
+8. Defect :-
+   # HTML tags,elements or Javascript functions are not properly assigned properly
+
+9. Assumptions :-
+   # JSON data repository used for running automated scripts contains wide variety of data and 
+     different type of data inside it
+   # Para bank website servers are working atleast between 8:00 am to 10:00 pm.
+   # Sufficiant resource allocation and enviornment setup by the company.
+   
+10. Enviornment :-
+   # All the Test Objectives to be performed on windows 11 operating system.
+   # All the test Objectives to be performed on microsoft bing and google Chrome browser.
+
+11. Entry criteria :-
+   # enviornment setup , JSON data for running automated script is allocated ,
+     All the test cases for fullfiling the objectives  are created ,Permission to 
+     Perform testing on Para bank website is granted by website owners
+12. Exit criteria :-
+     Test cases are performed.
+     50% test cases fails
+     
+13. Automation :-
+    Cypress using Javascript
+
+
+
+
+
+Test Cases :-
+Test Scenerio 1 :- Send a mail to Customer care
+Positive Test cases :-
+TC01 :- Open Chrome browser
+TC02 :- Enter and open the URL 
+TC03 :- Click on the Mail Customer care icon on Right side of Navbar
+TC04 :- Enter the name "Omi" in the input box
+TC05 :- Enter the email address "Omi222@gmail.com" inside the second input box
+TC06 :- Enter the phone number "4362094623" inside the third input box
+TC07 :- Enter the message "I am Facing technical error" inside the forth input box
+TC08 :- Click on the submit button
+
+Expected :- Thank you <name_of_customer>
+     A Customer Care Representative will be contacting you.
+      message will be displayed.
+actual :- As expected
+test status :- Passed
+
+Negative test cases :-
+TC01 :- Open Chrome browser
+TC02 :- Enter and open the URL 
+TC03 :- Click on the Mail Customer care icon on Right side of Navbar
+TC04 :- Enter the name "Omi" in the input box
+TC05 :- Enter the email address "Omi222@" inside the second input box
+TC06 :- Enter the phone number "43620" inside the third input box
+TC07 :- Enter the message "I am Facing technical error" inside the forth input box
+TC08 :- Click on the submit button
+
+Expected :- 
+          #  Error message will be displayed for email address as invalid email address 
+          #  Error message will be displayed for phone number as invalid phone number 
+          #  Error will be displayed in red colour as per the documented format
+
+Actual :- 
+    Error message was not diplayed for TC005,TC006 and TC08
+
+Test status :- Fail
+
+2. Test Scenerio 2 :- Register the User
+Positive test cases :-
+TC01 :- Open the chrome browser
+TC02 :- Enter the URL
+TC03 :- Click on the register button below the login form
+TC04 :- Enter the First name "Omkar" in the first input box
+TC05 :- Enter the last name "Bhole" in the second input box
+TC06 :- Enter the address "A/702 , P.N Sharma , Dadar East" in the third box
+TC07 :- Enter the city "Mumbai" in the fourth box
+TC08 :- Enter the state "Maharashtra" in the fifth box
+TC09 :- Enter the zip code "400091" in the sixth box
+TC10 :- Enter the Phone_no "9325523562" in the seventh box
+TC11 :- Enter the SSN number "42222vsa" in the eighth box
+TC12 :- Enter the Username "omiBhole22@gmail.com" in the ninth box
+TC13 :- Enter the Password "omib@22" in the tenth box
+TC14 :- Enter the Confirm Password "omib@22" in the eleventh box
+TC15 :- Click on the submit button
+
+Expected :- User created successfully message will be displayed on the middle of the
+     Screen as per the documented format 
+
+Actual :- As per Expected
+
+
+Negative Test Case :-
+TC01 :- Open the chrome browser
+TC02 :- Enter the URL
+TC03 :- Click on the register button below the login form
+TC04 :- Enter the First name "Omkar" in the first input box
+TC05 :- Enter the last name "Bhole" in the second input box
+TC06 :- Enter the address "A/702 , P.N Sharma , Dadar East" in the third box
+TC07 :- Enter the city "Mumbai" in the fourth box
+TC08 :- Enter the state "Maharashtra" in the fifth box
+TC09 :- Enter the zip code "400" in the sixth box
+TC10 :- Enter the Phone_no "9325523562" in the seventh box
+TC11 :- Enter the SSN number "42222vsa" in the eighth box
+TC12 :- Enter the Username "omiBhole22@gmail.com" in the ninth box
+TC13 :- Enter the Password "omib@22" in the tenth box
+TC14 :- Enter the Confirm Password "omi" in the eleventh box
+TC15 :- Click on the submit button
+
+Expected :- Invalid zipcode error wil be displayed 
+            Password dosent match error will be displayed
+            The error will be displayed as per the documented format
+
+Actual :- Error as 
+
+
+Testcase scenerio 3 :- Login user credential and logout after 5 seconds
+Positive Test case :-
+TC01 :- Open the Microsoft bing browser 
+TC02 :- open the url
+TC03 :- Enter the username "omiBhole22@gmail.com" in the username field in login form 
+TC04 :- Enter the Password "omib@22" in the password field in login form
+TC05 :- click on the login button 
+
+Expected :- Welcome Omkar message will be dips
+
+ 
+
+
+
+
+    
+     

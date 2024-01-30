@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "cypress": "^13.6.1",
+    "cypress-iframe": "^1.0.1"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.7.0"
+  },
+  "name": "29jan_package",
+  "version": "1.0.0",
+  "description": "Using Jenkins Creating code in Vs code",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "npx cypress run --headed --spec D:\\ShubhamGaikwad\\Cypress\\Day1\\cypress\\e2e\\TC001_jenkins.cy.js",
+    "runtest": "npm run test"
+  },
+ 
+  "author": "Shubham",
+  "license": "ISC"
+}
